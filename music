@@ -1,0 +1,18 @@
+pass=500
+setterm -blength $pass
+
+function beep(){
+    setterm -bfreq $1
+    setterm -blength `expr $2 \* $pass`
+    echo -e "\a"
+    sleep .5
+}
+
+beep 2000
+beep 3000
+beep 3000
+beep 1600
+beep 1300
+beep 1100
+beep 3000
+beep 3000
